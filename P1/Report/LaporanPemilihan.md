@@ -11,10 +11,10 @@
 
 Praktikum ini diimplementasikan pada file pemilihan.java, dibawah ini merupakan tangkapan layar dari hasil implementasi
 
-![Screenshot](../img/pemilihan(1).png)
+![Screenshot](../img/Pemilihan(1).png)
 ---
 ---
-![Screenshot](../img/pemilihan(2).png)
+![Screenshot](../img/Pemilihan(2).png)
 
 **Penjelasan Singkat:** Terdapat 4 langkah utama dalam program : 
 1. Pengguna melakukan input nilai
