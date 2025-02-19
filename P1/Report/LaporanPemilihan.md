@@ -3,7 +3,7 @@
 | NIM |  244107020018|
 | Nama |  Muhammad Fattahul Alim |
 | Kelas | TI - 1H |
-| Repository |  |
+| Repository |https://github.com/FattahulAlim/ALSD-Fattahul-Alim-2025|
 
 # Jobsheet 1 (Konsep Dasar Pemrograman)
 
