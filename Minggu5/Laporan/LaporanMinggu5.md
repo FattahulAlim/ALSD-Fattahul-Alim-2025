@@ -80,10 +80,6 @@
 
 ## 4.5 Latihan Praktikum
 
-![Screenshot](../img/Tugas.png)
----
-![Screenshot](../img/Tugas2.png)
----
-![Screenshot](../img/Tugas3.png)
+![Screenshot](../img/TugasNew.png)
 ---
 

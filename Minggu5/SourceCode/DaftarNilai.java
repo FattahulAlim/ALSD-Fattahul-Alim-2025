@@ -1,29 +1,29 @@
 package Minggu5.SourceCode;
 
 public class DaftarNilai {
-    String nama[];
-    String nim[];
-    String tahunMasuk[];
-    int nilaiUTS[];
-    int nilaiUAS[];
+    String nama;
+    String nim;
+    String tahunMasuk;
+    int nilaiUTS;
+    int nilaiUAS;
 
-    public DaftarNilai(int el){
-        nama = new String[el];
-        nim = new String[el];
-        tahunMasuk = new String[el];
-        nilaiUTS = new int[el];
-        nilaiUAS = new int[el];
+    public DaftarNilai(String nm, String nim, String thn, int uts, int uas){
+        nama = nm;
+        this.nim = nim;
+        tahunMasuk = thn;
+        nilaiUTS = uts;
+        nilaiUAS = uas;
     }
 
-    int NilaiUTSTertinggi(int arr[], int l, int r){
+    static int NilaiUTSTertinggi(DaftarNilai[] data, int l, int r){
         int maxUTS = 0;
         if (l == r) {
-            return arr[l];
+            return data[l].nilaiUTS;
         }
 
         int mid = (l+r) / 2;
-        int maxRight = NilaiUTSTertinggi(arr, l, mid);
-        int maxLeft = NilaiUTSTertinggi(arr, mid+1, r);
+        int maxRight = NilaiUTSTertinggi(data, l, mid);
+        int maxLeft = NilaiUTSTertinggi(data, mid+1, r);
 
         if (maxRight > maxLeft) {
             maxUTS = maxRight;
@@ -34,15 +34,15 @@ public class DaftarNilai {
         return maxUTS;
     } 
 
-    int NilaiUTSTerendah(int arr[], int l, int r){
+    static int NilaiUTSTerendah(DaftarNilai[] data, int l, int r){
         int minUTS = 0;
         if (l == r) {
-            return arr[l];
+            return data[l].nilaiUTS;
         }
 
         int mid = (l+r) / 2;
-        int minRight = NilaiUTSTerendah(arr, l, mid);
-        int minLeft = NilaiUTSTerendah(arr, mid+1, r);
+        int minRight = NilaiUTSTerendah(data, l, mid);
+        int minLeft = NilaiUTSTerendah(data, mid+1, r);
 
         if (minRight < minLeft) {
             minUTS = minRight;
@@ -53,15 +53,15 @@ public class DaftarNilai {
         return minUTS;
     } 
 
-    double rerataUAS(double el){
+    static double rerataUAS(DaftarNilai[] data){
         double rerata = 0;
         int total = 0;
 
-        for(int i = 0; i < el; i++){
-            total += nilaiUAS[i];
+        for(int i = 0; i < data.length; i++){
+            total += data[i].nilaiUAS;
         }
 
-        rerata += (total / el);
+        rerata += (total / data.length);
         return rerata;
     }
 }

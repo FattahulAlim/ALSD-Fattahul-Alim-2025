@@ -1,50 +1,32 @@
 package Minggu5.SourceCode;
-import java.util.Scanner;
 
 public class MainDaftarNilai {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
         int elemen, tertinggiUTS, terendahUTS, indexMax = 0, indexMin = 0;
         double rataUAS;
 
-        System.out.print("Input jumlah Mahasiswa: ");
-        elemen = sc.nextInt();
-        sc.nextLine();
+        DaftarNilai[] data = new DaftarNilai[8];
+        data[0] = new DaftarNilai("Ahmad", "220101001", "2022", 78, 82);
+        data[1] = new DaftarNilai("Budi", "220101002", "2022", 85, 88);
+        data[2] = new DaftarNilai("Cindy", "220101003", "2021", 90, 87);
+        data[3] = new DaftarNilai("Dian", "220101004", "2021", 76, 79);
+        data[4] = new DaftarNilai("Eko", "220101005", "2023", 92, 95);
+        data[5] = new DaftarNilai("Fajar", "220101006", "2020", 88, 85);
+        data[6] = new DaftarNilai("Gina", "220101007", "2023", 80, 83);
+        data[7] = new DaftarNilai("Hadi", "220101008", "2020", 82, 84);
 
-        DaftarNilai data = new DaftarNilai(elemen);
-        System.out.println("Input data mahasiswa");
+        tertinggiUTS = DaftarNilai.NilaiUTSTertinggi(data, 0, data.length - 1);
+        terendahUTS = DaftarNilai.NilaiUTSTerendah(data, 0, data.length - 1);
+        rataUAS = DaftarNilai.rerataUAS(data);
 
-        for (int i = 0; i < elemen; i++){
-            System.out.println("Data ke-" + (i+1));
-            System.out.print("Nama Mahasiswa: ");
-            data.nama[i] = sc.nextLine();
-
-            System.out.print("NIM: ");
-            data.nim[i] = sc.nextLine();
-
-            System.out.print("Tahun Masuk: ");
-            data.tahunMasuk[i] = sc.nextLine();
-
-            System.out.print("Nilai UTS: ");
-            data.nilaiUTS[i] = sc.nextInt();
-
-            System.out.print("Nilai UAS: ");
-            data.nilaiUAS[i] = sc.nextInt();
-            sc.nextLine();
-        }
-
-        tertinggiUTS = data.NilaiUTSTertinggi(data.nilaiUTS, 0, elemen-1);
-        terendahUTS = data.NilaiUTSTerendah(data.nilaiUTS, 0, elemen-1);
-        rataUAS = data.rerataUAS(elemen);
-
-        for(int i=0; i<elemen; i++){
-            if (tertinggiUTS == data.nilaiUTS[i]) {
+        for(int i=0; i<data.length; i++){
+            if (tertinggiUTS == data[i].nilaiUTS) {
                 indexMax = i;
             }
         }
         
-        for(int i=0; i<elemen; i++){
-            if (terendahUTS == data.nilaiUTS[i]) {
+        for(int i=0; i<data.length; i++){
+            if (terendahUTS == data[i].nilaiUTS) {
                indexMin = i;
             }
         }
@@ -52,21 +34,21 @@ public class MainDaftarNilai {
         System.out.println("---------------------");
         System.out.println("Nilai UTS Terbaik");
         System.out.println("---------------------");
-        System.out.println("Nama: " + data.nama[indexMax]);
-        System.out.println("NIM: " + data.nim[indexMax]);
-        System.out.println("Tahun Masuk: " + data.tahunMasuk[indexMax]);
-        System.out.println("Nilai UTS: " + data.nilaiUTS[indexMax]);
-        System.out.println("Nilai UAS: " + data.nilaiUAS[indexMax]);
+        System.out.println("Nama: " + data[indexMax].nama);
+        System.out.println("NIM: " + data[indexMax].nim);
+        System.out.println("Tahun Masuk: " + data[indexMax].tahunMasuk);
+        System.out.println("Nilai UTS: " + data[indexMax].nilaiUTS);
+        System.out.println("Nilai UAS: " + data[indexMax].nilaiUAS);
         System.out.println("---------------------");
         
         System.out.println("---------------------");
         System.out.println("Nilai UTS Terendah");
         System.out.println("---------------------");
-        System.out.println("Nama: " + data.nama[indexMin]);
-        System.out.println("NIM: " + data.nim[indexMin]);
-        System.out.println("Tahun Masuk: " + data.tahunMasuk[indexMin]);
-        System.out.println("Nilai UTS: " + data.nilaiUTS[indexMin]);
-        System.out.println("Nilai UAS: " + data.nilaiUAS[indexMin]);
+        System.out.println("Nama: " + data[indexMin].nama);
+        System.out.println("NIM: " + data[indexMin].nim);
+        System.out.println("Tahun Masuk: " + data[indexMin].tahunMasuk);
+        System.out.println("Nilai UTS: " + data[indexMin].nilaiUTS);
+        System.out.println("Nilai UAS: " + data[indexMin].nilaiUAS);
         System.out.println("---------------------");
 
         System.out.println("---------------------");
