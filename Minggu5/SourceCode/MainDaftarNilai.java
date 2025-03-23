@@ -2,7 +2,7 @@ package Minggu5.SourceCode;
 
 public class MainDaftarNilai {
     public static void main(String[] args) {
-        int elemen, tertinggiUTS, terendahUTS, indexMax = 0, indexMin = 0;
+        int tertinggiUTS, terendahUTS, indexMax = 0, indexMin = 0;
         double rataUAS;
 
         DaftarNilai[] data = new DaftarNilai[8];
