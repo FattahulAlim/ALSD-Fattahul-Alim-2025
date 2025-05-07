@@ -1,5 +1,3 @@
-package Minggu8.SourceCode;
-
 public class Mahasiswa {
     String nim;
     String namaMahasiswa;
@@ -14,7 +12,6 @@ public class Mahasiswa {
     }
 
     void tampilData(){
-        System.out.println("=== DATA MAHASISWA ===");
         System.out.println("NIM:    " + nim + " |   Nama:   " + namaMahasiswa);
     }
 }
