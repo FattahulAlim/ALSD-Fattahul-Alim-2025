@@ -109,7 +109,7 @@ public class Main {
         } while (pilihan != 0);
 
         sc.close();
-    }1
+    }
     
     // static void cariAlpha(Absensi[] absn){
     //     int max = 0;
