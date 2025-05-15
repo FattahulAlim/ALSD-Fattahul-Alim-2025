@@ -36,7 +36,7 @@ public class AntrianLayanan {
         rear = (rear + 1) % max;
         data[rear] = mhs;
         size++;
-        System.out.println("Berhasil masuk ke antriang.");
+        System.out.println("Berhasil masuk ke antrian.");
     }
 
     public Mahasiswa layaniMahasiswa(){
@@ -70,7 +70,7 @@ public class AntrianLayanan {
         System.out.println("NIM - NAMA - PRODI - KELAS");
         for (int i = 0; i < size; i++){
             int index = (front + i) % max;
-            System.out.println((i + 1) + ". ");
+            System.out.print((i + 1) + ". ");
             data[index].tampilkanData();
         }
     }
@@ -78,5 +78,14 @@ public class AntrianLayanan {
     public int getJumlahAntrian(){
         return size;
     }
-
+    
+        public void lihatTerakhir(){
+        if (isEmpty()) {
+            System.out.println("Antrian kosong");
+        } else {
+            System.out.println("Mahasiswa terdepan: ");
+            System.out.println("NIM - NAMA - PRODI - KELAS");
+            data[rear].tampilkanData();
+        }
+    }
 }

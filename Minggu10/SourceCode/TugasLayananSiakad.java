@@ -21,7 +21,7 @@ public class TugasLayananSiakad {
             System.out.println("8. Cetak jumlah Mahasiswa yang Belum Melakukan Proses KRS");
             System.out.println("9. Mengosongkan Antrian");
             System.out.println("0. Keluar");
-            System.out.println("Pilih menu: ");
+            System.out.print("Pilih menu: ");
             pilihan = sc.nextInt();
             sc.nextLine();
 
@@ -39,7 +39,7 @@ public class TugasLayananSiakad {
                     antriKRS.tambahAntrian(mhs);
                     break;
                 case 2:
-                    for(int i = 0; i <= 2; i++){
+                    for(int i = 0; i < 2; i++){
                         Mahasiswa dilayani = antriKRS.layaniMahasiswa();
                         if (dilayani != null) {
                             System.out.println("Melayani mahasiswa: ");

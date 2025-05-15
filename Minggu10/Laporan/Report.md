@@ -99,3 +99,57 @@ queue overflow dan queue underflow, program dihentikan!
         } 
         return dt;
     }
+
+## 2.2 Percobaan 2 : Antrian Layanan Akademik
+
+Hasil Praktikum :
+---
+![Screenshot](../img/Perc2.png)
+---
+![Screenshot](../img/Perc2(1).png)
+---
+
+### 2.2.3 Pertanyaan
+Lakukan modifikasi program dengan menambahkan method baru bernama LihatAkhir pada class
+AntrianLayanan yang digunakan untuk mengecek antrian yang berada di posisi belakang. Tambahkan
+pula daftar menu 6. Cek Antrian paling belakang pada class LayananAkademikSIAKAD sehingga
+method LihatAkhir dapat dipanggil!
+
+
+Modifikasi kode program: 
+
+                public void lihatTerakhir(){
+        if (isEmpty()) {
+            System.out.println("Antrian kosong");
+        } else {
+            System.out.println("Mahasiswa terdepan: ");
+            System.out.println("NIM - NAMA - PRODI - KELAS");
+            data[rear].tampilkanData();
+        }
+
+
+Hasil Output :
+---
+![Screenshot](../img/Perc2(2).png)
+
+## 2.3 Tugas
+
+Hasil Output:
+---
+![Screenshot](../img/Tugas.png)
+---
+![Screenshot](../img/Tugas(1).png)
+---
+![Screenshot](../img/Tugas(2).png)
+---
+![Screenshot](../img/Tugas(3).png)
+
+
+Diagram Class :
+---
+![Screenshot](../img/Diagram(1).png)
+---
+![Screenshot](../img/Diagram(2).png)
+---
+
+

@@ -15,8 +15,9 @@ public class LayananAkademikSiakad {
             System.out.println("3. Lihat Mahasiwa Terdepan");
             System.out.println("4. Lihat Semua Antrian");
             System.out.println("5. Jumlah Mahasiswa dalam antrian");
+            System.out.println("6. Lihat antrian terakhir");
             System.out.println("0. Keluar");
-            System.out.println("Pilih menu: ");
+            System.out.print("Pilih menu: ");
             pilihan = sc.nextInt();
             sc.nextLine();
 
@@ -36,7 +37,7 @@ public class LayananAkademikSiakad {
                 case 2:
                     Mahasiswa dilayani = antrian.layaniMahasiswa();
                     if (dilayani != null) {
-                        System.out.println("Melayani mahasiswa: ");
+                        System.out.print("Melayani mahasiswa: ");
                         dilayani.tampilkanData();
                     }
                     break;
@@ -48,6 +49,9 @@ public class LayananAkademikSiakad {
                     break;                
                 case 5:
                     System.out.println("Jumlah dalam antrian: " + antrian.getJumlahAntrian());
+                    break;
+                case 6:
+                    antrian.lihatTerakhir();
                     break;
                 case 0:
                     System.out.println("Terima Kasih.");

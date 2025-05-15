@@ -83,7 +83,7 @@ public class TugasAntrianLayanan {
         if (isEmpty()) {
             System.out.println("Antrian kosong");
         } else {
-            System.out.println("Mahasiswa terdepan: ");
+            System.out.println("Mahasiswa antri terakhir: ");
             System.out.println("NIM - NAMA - PRODI - KELAS");
             data[rear].tampilkanData();
         }
@@ -99,7 +99,7 @@ public class TugasAntrianLayanan {
         System.out.println("NIM - NAMA - PRODI - KELAS");
         for (int i = 0; i < size; i++){
             int index = (front + i) % max;
-            System.out.println((i + 1) + ". ");
+            System.out.print((i + 1) + ". ");
             data[index].tampilkanData();
         }
     }
